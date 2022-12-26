@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const usersRepo = require("./repositories/users");
+const users = require("./repositories/users");
 
 const app = express();
 
@@ -30,6 +31,8 @@ app.post("/", async (req, res) => {
   if (password !== passwordConfirmation) {
     return res.send("Passwords must match");
   }
+
+  const user = await usersRepo.create({ email, password });
 
   res.send("Account Created");
 });
