@@ -1,4 +1,4 @@
-module.exports = ({req}) => {
+module.exports = ({ req }) => {
   return `
     <div>
         Your id is : ${req.session.userId}
@@ -9,5 +9,6 @@ module.exports = ({req}) => {
             <button>Sign Up</button>
         </form>
     </div>
+    
     `;
 };

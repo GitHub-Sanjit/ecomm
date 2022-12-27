@@ -6,6 +6,6 @@ module.exports = () => {
             <input name="password"  placeholder="password" />
             <button>Sign In</button>
         </form>
-    </div>
+    </div>  
     `;
 };
