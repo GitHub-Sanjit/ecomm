@@ -16,5 +16,10 @@
     "email": "ana@ta.com",
     "password": "123456",
     "id": "1aaea48a"
+  },
+  {
+    "email": "test3@test.com",
+    "password": "483d3a8b613d4dcfbf5861f88972683eb15344c379b66d1e7b3dddcff1873279025f0fff1ec15721ca073c93dcc419252586b2c06d71dbe051c2ebe7669ce649.63b0f5a715dfb413",
+    "id": "7a24b4d7"
   }
 ]
