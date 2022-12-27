@@ -39,11 +39,11 @@ router.post(
 
 router.get("/signout", (req, res) => {
   req.session = null;
-  res.send("You are Logged Out");
+  res.send("You are Logged Out"); 
 });
 
 router.get("/signin", (req, res) => {
-  res.send(signinTemplate());
+  res.send(signinTemplate({}));
 });
 
 router.post(
@@ -51,7 +51,11 @@ router.post(
   [requiredEmailExist, requireValidPasswordForUser],
   async (req, res) => {
     const errors = validationResult(req);
-    console.log(errors);
+
+    if (!errors.isEmpty()) {
+      return res.send(signinTemplate({ errors }));
+    }
+
     const { email } = req.body;
 
     const user = await usersRepo.getOneBy({ email });
